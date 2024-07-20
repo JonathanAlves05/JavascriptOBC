@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #00215E;
+    font-family: cursive, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#gameBoard {
+    background-color: #FFFDEF;
+    display: grid;
+    grid-template-columns: 6rem 6rem 6rem;
+    grid-template-rows: 6rem 6rem 6rem;
+    gap: .5rem;
+    margin: 0 auto 1.5rem;
+    max-width: 19rem;
+    
+  }
+
+  #gameBoard span {
+    background-color:  #00215E;
+    display: grid;
+    place-content: center;
+    font-size: 5rem;
+  }
+
+  #gameBoard span.win {
+    background-color: #25a340;
+  }
+
+  .cursor-pointer {
+    cursor: pointer;
+  }
+
+.cont--principal {
+    display: block;
+    
+    position: relative;
+    margin: 0.5rem auto;
+    max-width: 40rem;
+    
+    padding:  1.5rem 2.5rem;
+    text-align: center; /* Centraliza o conteúdo dentro do contêiner */
+
+}
+
+header {
+    padding: 0.25rem 0;
+    text-align: center;
+    
+}
+h1 {
+    font-size: 2rem;
+    border-bottom: 1px solid #FFFDEF;
+    padding-bottom: 0.5rem;
+    color: #FFFDEF;
+}
+
+h2 {
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+    color: #FFFDEF;
+}
+
+span:hover, #start:hover {
+    filter: brightness(0.8);
+}
+#start {
+    display: block;
+    padding: 0.5rem 1rem;
+    background-color: #0802A3;
+    border: none;
+    color: rgb(255, 254, 254);
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.cont--players {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+.cont--players, .letraX, .letraO{
+    font-size: 2rem;
+    color:#FFFDEF;
+}
+.letraX {
+    color: #F0DE36;
+}
+.letraO {
+    color: #D71313;
+}
+#player1, #player2 {
+    width: 10rem;
+    padding: 0.25rem;
+    
+    height: 1.5rem;
+    margin-top: 0.5rem;
+    border: none;
+    border-radius: 0.25rem;
+}
+#cont--vez h2 {
+    margin: 1rem 0;
+    color: white;
+}
+
+/* Estilo responsivo para telas menores */
+@media (max-width: 600px) {
+    .cont--principal {
+        width: 100%;
+    }
+    #gameBoard span {
+        font-size: 3rem;
+    }
+  
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    #start {
+        font-size: 1rem;
+        padding: 0.25rem 0.3rem;
+    }
+
+    #player1, #player2 {
+        width: 4rem;
+        height: 1.5rem;
+        font-size: 1rem;
+    }
+    
+}
